@@ -1,3 +1,5 @@
 .idea
 pkg
 .vscode
+main.go
+/test

@@ -19,13 +19,12 @@ func Uppercase(s string) string {
 	return string(result)
 }
 
-func GenerateEncryptionKey() (string, error) {
-	// Define the length of the key in bytes (32, 64, 128... => 256, 512, 1024...)
-	size := 32
-
+// Define the length of the key in bytes (32, 64, 128... => 256, 512, 1024...)
+func GenerateEncryptionKey(size int) (string, error) {
 	key := make([]byte, size)
 
 	// Fill the key slice with cryptographic keys
+
 	_, err := rand.Read(key)
 	if err != nil {
 		return "", err
